@@ -1,20 +1,7 @@
 const calcuteNumber = (type, a, b) => {
-    a = Math.round(a);
-    b = Math.round(b);
-    switch (type) {
-      case "SUM":
-        return a + b;
-        break;
-      case "SUBTRACT":
-        return b - a;
-        break;
-      case "DIVIDE":
-        if (b === 0) return "Error";
-        return a / b;
-        break;
-      default:
-        break;
-    }
-  };
-  module.exports = calcuteNumber;
-  
+    if (type === 'SUM') return Math.round(a) + Math.round(b);
+    if (type === 'SUBTRACT') return Math.round(a) - Math.round(b);
+    if (type === 'DIVIDE') return Math.round(b) === 0 ? 'Error' : Math.round(a) / Math.round(b);
+
+};
+module.exports = calcuteNumber;
